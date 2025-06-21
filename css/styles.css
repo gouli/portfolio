@@ -588,3 +588,21 @@ section {
     grid-template-columns: 1fr;
   }
 }
+.hamburger-icon rect {
+  fill: #333;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* When open — turn into "X" */
+.hamburger-icon.open .bar1 {
+  transform: rotate(45deg) translate(15px, 15px);
+}
+
+.hamburger-icon.open .bar2 {
+  opacity: 0;
+}
+
+.hamburger-icon.open .bar3 {
+  transform: rotate(-45deg) translate(15px, -15px);
+}
