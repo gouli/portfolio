@@ -11,10 +11,18 @@ hamburgerToggle.addEventListener("click", () => {
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth' });
+    const targetId = link.getAttribute('href');
+    const target = document.querySelector(targetId);
 
-    // Close nav if open
+    if (target) {
+      const offsetTop = target.offsetTop - 10; // Scroll to 10px above the section
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+
+    // Close mobile nav
     if (navCollapse.classList.contains('open')) {
       navCollapse.classList.remove('open');
       hamburgerIcon.classList.remove('open');
