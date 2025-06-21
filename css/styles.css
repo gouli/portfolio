@@ -10,7 +10,7 @@ header { background: #fff; border-bottom: 1px solid #eee; position: sticky; top:
 .hero { height: 60vh; background: #f4f4f4; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
 .hero p { font-size: 1.2rem; color: #555; }
-section { padding: 4rem 1rem; max-width: 1000px; margin: 0 auto; }
+section { padding: 4rem 1rem; margin: 0 auto;   width: 100%; max-width: 100%; box-sizing: border-box;}
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 2rem; }
 .project-card { border: 1px solid #ddd; padding: 1rem; border-radius: 8px; background: #fff; }
 .project-card img { width: 100%; border-radius: 4px; }
@@ -143,6 +143,10 @@ ul.list {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   margin-top: 2rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 .project-card {
   background: rgba(255,255,255,0.9);
@@ -576,5 +580,11 @@ section {
   .navbar {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 }
