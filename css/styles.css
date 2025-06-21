@@ -186,8 +186,7 @@ ul.list {
 .footer-content, .skills-list, .projects-grid, .testimonial, ul.list {
   max-width: 100%;
   width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 0;
   box-sizing: border-box;
 }
 
