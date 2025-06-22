@@ -17,11 +17,11 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif; /* You can choose a better font from Google Fonts */
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--dark-text);
     background-color: #fff;
-    overflow-x: hidden; /* Prevent horizontal scroll from parallax */
+    overflow-x: hidden;
 }
 
 a {
@@ -32,7 +32,7 @@ a {
 img {
     max-width: 100%;
     height: auto;
-    display: block; /* Removes extra space below images */
+    display: block;
 }
 
 .container {
@@ -43,12 +43,13 @@ img {
 
 h1, h2, h3 {
     margin-bottom: 20px;
-    color: var(--dark-text);
+    color: var(--dark-text); /* Default dark text */
 }
 
 h1 {
     font-size: 3.5em;
-    color: var(--light-text); /* Override for hero section */
+    color: var(--light-text); /* Hero section override */
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* Enhance readability on busy backgrounds */
 }
 
 h2 {
@@ -72,7 +73,7 @@ p {
 }
 
 .btn:hover {
-    background-color: #218838; /* A darker shade of accent-color */
+    background-color: #218838;
 }
 
 /* Header & Navigation */
@@ -86,7 +87,7 @@ p {
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    padding: 10px 0; /* Adjust padding if needed for new logo size */
+    padding: 10px 0;
 }
 
 .navbar {
@@ -96,7 +97,6 @@ p {
 }
 
 .logo {
-    /* Existing logo styles for overall container */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -130,8 +130,27 @@ p {
     color: #b0c4de;
 }
 
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: var(--light-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
 .hamburger {
-    display: none; /* Hidden by default on larger screens */
+    display: none;
     flex-direction: column;
     cursor: pointer;
 }
@@ -157,24 +176,84 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: var(--light-text);
+    background-attachment: fixed; /* This is the magic for CSS parallax! */
+    color: var(--light-text); /* Ensure text is readable on dark backgrounds */
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 700px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text readability */
 }
 
+/* Specific Background Images for Sections */
 #hero {
-    /* Unsplash Image for Hero Section */
-    background-image: url('assets/section-1.jpg');
+    background-image: url('assets/section-3.jpg'); /* Orange/Blue light streaks */
+    background-color: #000; /* Fallback/background for image */
+    background-blend-mode: overlay; /* Blend mode can make text easier to read, or remove if not needed */
+    filter: brightness(0.7); /* Slightly dim the image to help text pop */
 }
+/* Re-add text-shadow directly to .hero-content if the filter above makes text harder to read */
+#hero .hero-content {
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    z-index: 2; /* Ensure content is above filter/image */
+}
+
+#services {
+    background-image: url('assets/section-2.jpg'); /* Light blue ethereal */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Optional: Add a subtle overlay or blend mode for readability if needed */
+    background-color: rgba(255,255,255,0.8); /* Light overlay */
+    background-blend-mode: overlay;
+    color: var(--dark-text); /* Keep dark text for light background */
+    padding-top: 100px;
+}
+#services h2, #services .service-item h3 {
+    color: var(--dark-text); /* Ensure headers are dark */
+}
+
+
+#skills {
+    background-image: url('assets/section-4.jpg'); /* Blue/Purple network */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--dark-bg); /* Fallback/background for image */
+    background-blend-mode: overlay; /* Darken for readability */
+    color: var(--light-text);
+    padding-top: 100px;
+}
+#skills h2, #skills .skill-item h3, #skills .skill-item i {
+    color: var(--light-text); /* Ensure headers and icons are light */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* For skill item elements */
+}
+.skill-item {
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly more opaque for better contrast */
+}
+.skill-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 
 #portfolio {
-    /* Unsplash Image for Portfolio Background */
-    background-image: url('assets/section-2.jpg);
+    background-image: url('assets/section-1.jpg'); /* Dark blue/green waves */
+    background-color: #000; /* Fallback for image */
+    background-blend-mode: luminosity; /* Adjust blend mode for effect, try others like overlay, screen, etc. */
+    filter: brightness(0.6); /* Dim the background to make content pop */
 }
+#portfolio .container {
+    z-index: 2; /* Ensure content is above filter/image */
+}
+#portfolio h2 {
+    color: var(--light-text); /* Ensure header is light */
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+.portfolio-item {
+    background-color: rgba(255, 255, 255, 0.95); /* Make portfolio items almost opaque white */
+    color: var(--dark-text); /* Ensure text within items is dark */
+}
+
 
 .hero-content {
     max-width: 800px;
@@ -208,154 +287,6 @@ section {
 
 .about-content p {
     text-align: center;
-}
-
-/* Services Section */
-.services-section {
-    background-color: #f9f9f9;
-    padding-top: 100px;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.service-item {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
-
-.service-item i {
-    font-size: 3.5em;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.service-item h3 {
-    font-size: 1.6em;
-    margin-bottom: 15px;
-    color: var(--dark-text);
-}
-
-.service-item p {
-    font-size: 0.95em;
-    line-height: 1.7;
-    color: var(--secondary-color);
-}
-
-/* Skills Section - Design Pattern/Color Background */
-.skills-section {
-    background-color: var(--dark-bg);
-    color: var(--light-text);
-    background-image: linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1) 100%),
-                      linear-gradient(-45deg, rgba(0,0,0,0.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1) 100%);
-    background-size: 20px 20px;
-    background-position: 0 0, 10px 10px;
-    padding-top: 100px;
-}
-
-.skills-section h2 {
-    color: var(--light-text);
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.skill-item {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 30px 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.skill-item i {
-    font-size: 3.5em;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.skill-item h3 {
-    font-size: 1.3em;
-    color: var(--light-text);
-}
-
-/* Portfolio Section */
-.portfolio-section {
-    padding-top: 100px;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.portfolio-item {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: var(--dark-text);
-}
-
-.portfolio-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.portfolio-item img {
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.portfolio-item h3 {
-    font-size: 1.6em;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
-
-.portfolio-item p {
-    font-size: 0.95em;
-    margin-bottom: 20px;
-}
-
-.project-link {
-    background-color: var(--primary-color);
-    color: var(--light-text);
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.project-link:hover {
-    background-color: #0056b3;
 }
 
 /* Contact Section */
@@ -470,7 +401,6 @@ section {
     transform: translateY(-3px);
 }
 
-/* Ensure branding text aligns correctly */
 .footer-section:last-child {
     text-align: left;
 }
@@ -531,7 +461,7 @@ section {
         text-align: center;
     }
 
-    .skills-grid, .portfolio-grid, .services-grid { /* Added services-grid here */
+    .skills-grid, .portfolio-grid, .services-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
@@ -557,10 +487,10 @@ section {
 
     .parallax {
         min-height: 400px;
-        background-attachment: scroll;
+        background-attachment: scroll; /* Disable parallax on mobile for performance/preference */
     }
 
-    .skills-grid, .portfolio-grid, .services-grid { /* Added services-grid here */
+    .skills-grid, .portfolio-grid, .services-grid {
         grid-template-columns: 1fr;
     }
 
