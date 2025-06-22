@@ -134,19 +134,19 @@ nav.open .nav-links li {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);  /* darken overlay */
+  /*background: rgba(0, 0, 0, 0.5);*/  /* darken overlay */
   z-index: 0;
 }
 .section.full-bg {
   position: relative;
   z-index: 1;
-  color: #f0f0f0;  /* lighter but not pure white */
+  /*color: #f0f0f0; */ /* lighter but not pure white */
 }
 .section.full-bg h2,
 .section.full-bg p,
 .section.full-bg blockquote,
 .section.full-bg footer {
-  color: #f0f0f0;
+  /*color: #f0f0f0;*/
 }
 
 /* Services */
@@ -268,11 +268,11 @@ footer small a:hover {
   to { opacity: 1; transform: translateY(0); }
 }
 .about-bg::before {
-  background: rgba(0, 0, 0, 0.6); /* Slightly darker for better text contrast */
+  /*background: rgba(0, 0, 0, 0.6);*/ /* Slightly darker for better text contrast */
 }
 
 .testimonial-bg::before {
-  background: rgba(0, 0, 0, 0.6); /* Ditto */
+  /*background: rgba(0, 0, 0, 0.6);*/ /* Ditto */
 }
 
 #testimonials blockquote {
@@ -282,6 +282,7 @@ footer small a:hover {
 
 #testimonials footer {
   color: #ddd;
+  background: none;
 }, 
 .section .content-wrapper {
   background: rgba(0, 0, 0, 0.4);
