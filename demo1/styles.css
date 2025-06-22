@@ -85,3 +85,62 @@ blockquote footer {
   font-weight: bold;
   margin-top: 0.5rem;
 }
+/* Reset Pico nav button style look */
+nav ul li a {
+  padding: 0.25rem 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: none;
+  border: none;
+}
+
+/* Transparent Navbar */
+#main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+#main-header.transparent {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#main-header.scrolled {
+  background-color: white;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #eee;
+}
+
+.nav-inner {
+  padding: 0.5rem 1rem !important;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero starts at top and fills viewport */
+.hero-section {
+  background-image: url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
