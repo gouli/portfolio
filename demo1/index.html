@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>My Portfolio</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" role="button">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <div class="grid">
+      <section>
+        <hgroup>
+          <h2>Hello, I'm Alex</h2>
+          <h3>Web Developer & Designer</h3>
+        </hgroup>
+        <p>I create elegant, responsive websites focused on performance and clean design.</p>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Hero workspace" />
+          <figcaption>
+            <a href="https://unsplash.com/photos/TMgQMXoglsM" target="_blank">Photo by Brooke Cagle on Unsplash</a>
+          </figcaption>
+        </figure>
+
+        <h3 id="projects">Projects</h3>
+        <p>Here are a few samples of my recent work.</p>
+        <div class="grid">
+          <article>
+            <img src="https://images.unsplash.com/photo-1612832021646-cd96a5e23d06" alt="Dashboard UI" />
+            <h4>Admin Dashboard</h4>
+            <p>Built with modern CSS Grid & charts.</p>
+          </article>
+          <article>
+            <img src="https://images.unsplash.com/photo-1607082349449-61f8dc1d8f38" alt="Landing page" />
+            <h4>Landing Page</h4>
+            <p>Responsive landing page with smooth scrolling and mobile-first layout.</p>
+          </article>
+          <article>
+            <img src="https://images.unsplash.com/photo-1559027615-b4e89ab43f26" alt="Blog interface" />
+            <h4>Blog UI</h4>
+            <p>Minimal blog interface design using semantic HTML.</p>
+          </article>
+        </div>
+
+        <h3 id="about">About Me</h3>
+        <p>I’m a self-taught frontend developer with a strong focus on accessibility, responsive design, and modern JavaScript. I love turning ideas into reality in the browser.</p>
+
+        <h3 id="contact">Contact</h3>
+        <p>Get in touch using the form below.</p>
+      </section>
+    </div>
+  </main>
+
+  <section aria-label="Subscribe example">
+    <div class="container">
+      <article>
+        <hgroup>
+          <h2>Contact Me</h2>
+          <h3>Let’s build something together</h3>
+        </hgroup>
+        <form class="grid">
+          <input type="text" id="firstname" name="firstname" placeholder="Your name" aria-label="Name" required />
+          <input type="email" id="email" name="email" placeholder="you@example.com" aria-label="Email" required />
+          <button type="submit" onclick="event.preventDefault()">Send</button>
+        </form>
+      </article>
+    </div>
+  </section>
+
+  <footer class="container">
+    <small>
+      <a href="#">LinkedIn</a> • <a href="#">GitHub</a>
+    </small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
