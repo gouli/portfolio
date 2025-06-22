@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">YourName</a>
+                <div class="hamburger" id="hamburger-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section parallax" data-parallax-speed="0.5">
+        <div class="hero-content">
+            <h1>Hi, I'm Your Name</h1>
+            <p>A Passionate Web Developer & Designer</p>
+            <a href="#portfolio" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="https://via.placeholder.com/200" alt="Your Profile Picture" class="profile-pic">
+                <p>
+                    Hello! I'm [Your Name], a web developer with a knack for crafting beautiful and functional web experiences.
+                    I specialize in building responsive and user-friendly websites using HTML, CSS, and JavaScript.
+                    My journey in web development started with a curiosity for how websites work, and it quickly blossomed
+                    into a passion for creating impactful digital solutions. I love turning ideas into reality and
+                    constantly learning new technologies to improve my craft.
+                </p>
+                <p>
+                    When I'm not coding, you can find me [mention a hobby, e.g., exploring new coffee shops, hiking, reading].
+                    I believe in clean code, elegant design, and continuous improvement. Let's build something amazing together!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-git-alt"></i>
+                    <h3>Git & GitHub</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section parallax" data-parallax-speed="0.3">
+        <div class="container">
+            <h2>My Work</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300/FF5733/FFFFFF?text=Project+1" alt="Project 1">
+                    <h3>Project Title 1</h3>
+                    <p>A brief description of project 1 and technologies used.</p>
+                    <a href="#" target="_blank" class="project-link">View Project</a>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300/33FF57/FFFFFF?text=Project+2" alt="Project 2">
+                    <h3>Project Title 2</h3>
+                    <p>A brief description of project 2 and technologies used.</p>
+                    <a href="#" target="_blank" class="project-link">View Project</a>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x300/5733FF/FFFFFF?text=Project+3" alt="Project 3">
+                    <h3>Project Title 3</h3>
+                    <p>A brief description of project 3 and technologies used.</p>
+                    <a href="#" target="_blank" class="project-link">View Project</a>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Have a project in mind or just want to say hello? Feel free to reach out!</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
