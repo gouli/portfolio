@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Awesome Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Playfair+Display:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -12,7 +15,10 @@
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">YourName</a>
+                <a href="#" class="logo">
+                    <span class="logo-initials">MG</span>
+                    <span class="logo-name">Mahesha Gouli</span>
+                </a>
                 <div class="hamburger" id="hamburger-menu">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -160,11 +166,39 @@
         </div>
     </section>
 
-    <footer class="footer">
+<footer class="footer">
         <div class="container">
-            <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Address</h3>
+                    <p>123 Web Dev Street</p>
+                    <p>Codeville, CA 90210</p>
+                    <p>United States</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                    <p><i class="fas fa-phone"></i> Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links-footer">
+                        <a href="https://www.facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Branding</h3>
+                    <p>Site built with passion by RTS</p>
+                    <p>&copy; <span id="current-year"></span> Mahesha Gouli. All rights reserved.</p>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
     <script src="script.js"></script>
 </body>
