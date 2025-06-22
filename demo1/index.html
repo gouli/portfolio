@@ -1,51 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alex Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <nav class="container-fluid">
-    <ul>
-      <li><strong>Alex</strong></li>
-    </ul>
-    <ul>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact" role="button">Contact</a></li>
-    </ul>
-  </nav>
+  <header class="sticky-nav">
+    <nav class="container-fluid">
+      <ul>
+        <li><strong>Alex</strong></li>
+      </ul>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact" role="button">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <header class="hero">
-    <div class="hero-content container">
+  <section class="hero-section full-bg">
+    <div class="container hero-content">
       <h1>Hello, I'm Alex</h1>
       <p>Crafting beautiful web experiences that drive results.</p>
     </div>
-  </header>
+  </section>
 
   <main class="container">
-    <section id="services">
+    <section id="services" class="full-bg light-overlay services-bg">
       <h2>Services</h2>
       <div class="grid">
-        <article>
-          <h3>Web Design</h3>
-          <p>Modern and responsive designs tailored for your audience.</p>
-        </article>
-        <article>
-          <h3>Frontend Development</h3>
-          <p>Clean HTML, CSS, and JavaScript to bring designs to life.</p>
-        </article>
-        <article>
-          <h3>Performance Optimization</h3>
-          <p>Fast, accessible, and SEO-friendly websites that convert.</p>
-        </article>
+        <article><h3>Web Design</h3><p>Modern, accessible, responsive websites.</p></article>
+        <article><h3>Frontend Dev</h3><p>Clean, scalable HTML, CSS & JavaScript.</p></article>
+        <article><h3>Site Optimization</h3><p>Fast, SEO-ready sites with performance tuning.</p></article>
       </div>
     </section>
 
@@ -53,33 +44,43 @@
       <h2>Projects</h2>
       <div class="grid">
         <article>
-          <img src="https://images.unsplash.com/photo-1612832021646-cd96a5e23d06" alt="Dashboard UI" />
+          <img src="https://images.unsplash.com/photo-1581092160622-1e7e3286f643" alt="Dashboard UI">
           <h4>Admin Dashboard</h4>
-          <p>Built with modern CSS Grid & charts.</p>
+          <p>Built with modern CSS Grid, charts and accessibility.</p>
         </article>
         <article>
-          <img src="https://images.unsplash.com/photo-1607082349449-61f8dc1d8f38" alt="Landing page" />
+          <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9" alt="Landing page">
           <h4>Landing Page</h4>
-          <p>Responsive layout and smooth animations.</p>
+          <p>Responsive layout with CTA focus and smooth animations.</p>
+        </article>
+        <article>
+          <img src="https://images.unsplash.com/photo-1611175694980-4ec19cb3075d" alt="Blog UI">
+          <h4>Blog UI</h4>
+          <p>Minimalist design and clean post formatting.</p>
+        </article>
+        <article>
+          <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d" alt="Portfolio gallery">
+          <h4>Portfolio Grid</h4>
+          <p>Project showcase with filterable grid layout.</p>
         </article>
       </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="full-bg about-bg light-overlay">
       <h2>About Me</h2>
-      <p>I’m a frontend developer with a passion for modern, elegant, and performant websites. I love turning ideas into interactive experiences on the web.</p>
+      <p>I’m a frontend developer passionate about performance, simplicity, and bringing bold ideas to life with code. I enjoy building elegant UIs and solving real-world problems on the web.</p>
     </section>
 
-    <section id="testimonials" class="testimonials">
-      <h2>References</h2>
+    <section id="testimonials" class="full-bg testimonial-bg">
+      <h2>Testimonials</h2>
       <div class="grid">
         <blockquote>
-          <p>"Alex delivered our website ahead of schedule and exceeded expectations!"</p>
-          <footer>— Jamie R., Startup CEO</footer>
+          <p>\"Alex delivered exactly what we needed — clean code, fast delivery, and style!\"</p>
+          <footer>— Jamie R., Product Owner</footer>
         </blockquote>
         <blockquote>
-          <p>"Creative, detail-oriented, and incredibly professional."</p>
-          <footer>— Taylor M., Design Lead</footer>
+          <p>\"Extremely professional and creative. A joy to work with!\"</p>
+          <footer>— Taylor M., Art Director</footer>
         </blockquote>
       </div>
     </section>
@@ -90,12 +91,12 @@
       <article>
         <hgroup>
           <h2>Contact Me</h2>
-          <h3>Let’s build something great</h3>
+          <h3>Let’s build something great together</h3>
         </hgroup>
         <form class="grid">
-          <input type="text" id="name" name="name" placeholder="Your name" aria-label="Name" required />
-          <input type="email" id="email" name="email" placeholder="Your email" aria-label="Email" required />
-          <textarea id="message" name="message" placeholder="Your message" aria-label="Message" required></textarea>
+          <input type="text" name="name" placeholder="Your name" aria-label="Name" required>
+          <input type="email" name="email" placeholder="Your email" aria-label="Email" required>
+          <textarea name="message" placeholder="Your message" aria-label="Message" required></textarea>
           <button type="submit" onclick="event.preventDefault()">Send</button>
         </form>
       </article>
@@ -108,5 +109,4 @@
 
   <script src="script.js"></script>
 </body>
-
 </html>
