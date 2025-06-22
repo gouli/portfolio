@@ -288,6 +288,9 @@ footer small a:hover {
   padding: 2rem;
   border-radius: 8px;
 }
-.transparent .hamburger, .transparent nav ul.nav-links a {
+.transparent .hamburger {
   background: #fff;
 }
+ .transparent nav ul.nav-links a {
+   color: #fff;
+ }
