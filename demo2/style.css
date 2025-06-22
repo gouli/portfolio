@@ -295,10 +295,71 @@ section {
     color: var(--light-text); /* Ensure header is light */
     text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
-.portfolio-item {
-    background-color: rgba(255, 255, 255, 0.95); /* Make portfolio items almost opaque white */
-    color: var(--dark-text); /* Ensure text within items is dark */
+
+/* --- Portfolio Specific Styles --- */
+.portfolio-grid {
+    display: grid;
+    /* This makes the grid responsive: at least 300px wide, and as many columns as fit */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Space between cards */
+    max-width: 1000px; /* Optional: Constrain grid width */
+    margin: 0 auto; /* Center the grid */
+    padding-top: 20px; /* Add some space below the H2 */
 }
+
+.portfolio-item {
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background for the card */
+    color: var(--dark-text); /* Ensure text within items is dark */
+    border-radius: 10px; /* Slightly more rounded corners */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow for a card effect */
+    overflow: hidden; /* Ensures image corners match card corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Use flexbox to stack content vertically */
+    flex-direction: column;
+    text-align: left; /* Align text within the card */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px); /* Lift effect on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.portfolio-item img {
+    width: 100%; /* Image takes full width of its container */
+    height: 220px; /* Fixed height for consistency among project images */
+    object-fit: cover; /* Crucial: Crops image to cover the area without distortion */
+    border-bottom: 1px solid #eee; /* Subtle separator */
+}
+
+.portfolio-item h3 {
+    margin: 15px 15px 10px; /* Spacing within the card */
+    font-size: 1.4em;
+    color: var(--dark-text);
+}
+
+.portfolio-item p {
+    margin: 0 15px 15px; /* Spacing within the card */
+    font-size: 0.95em;
+    color: var(--secondary-color);
+    flex-grow: 1; /* Allows description to take up available space */
+}
+
+.portfolio-item .project-link {
+    display: inline-block; /* Make button proper block within text flow */
+    background-color: var(--primary-color); /* Use primary color for link button */
+    color: var(--light-text);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 15px 20px; /* Spacing at the bottom of the card */
+    align-self: flex-start; /* Align link button to the left */
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-item .project-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+/* --- End Portfolio Specific Styles --- */
 
 
 .hero-content {
@@ -346,27 +407,23 @@ section {
 }
 
 .service-item {
-    background-color: #fff; /* Re-adjust for new background */
+    /* Background and shadow for service items updated above */
     border-radius: 8px;
     padding: 30px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
 
 .service-item i {
     font-size: 3.5em;
-    color: var(--primary-color);
+    /* color updated above */
     margin-bottom: 20px;
 }
 
 .service-item h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
+    /* color updated above */
 }
 
 /* Contact Section */
@@ -541,7 +598,7 @@ section {
         text-align: center;
     }
 
-    .skills-grid, .portfolio-grid, .services-grid {
+    .skills-grid, .portfolio-grid, .services-grid { /* Keep these for general responsiveness */
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
@@ -570,7 +627,7 @@ section {
         background-attachment: scroll; /* Disable parallax on mobile for performance/preference */
     }
 
-    .skills-grid, .portfolio-grid, .services-grid {
+    .skills-grid, .portfolio-grid, .services-grid { /* Adjust to single column for very small screens */
         grid-template-columns: 1fr;
     }
 
