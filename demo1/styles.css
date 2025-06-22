@@ -130,6 +130,24 @@ nav.open .nav-links li {
   inset: 0;
   z-index: 0;
 }
+.full-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);  /* darken overlay */
+  z-index: 0;
+}
+.section.full-bg {
+  position: relative;
+  z-index: 1;
+  color: #f0f0f0;  /* lighter but not pure white */
+}
+.section.full-bg h2,
+.section.full-bg p,
+.section.full-bg blockquote,
+.section.full-bg footer {
+  color: #f0f0f0;
+}
 
 /* Services */
 .services-bg {
@@ -248,4 +266,25 @@ footer small a:hover {
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+.about-bg::before {
+  background: rgba(0, 0, 0, 0.6); /* Slightly darker for better text contrast */
+}
+
+.testimonial-bg::before {
+  background: rgba(0, 0, 0, 0.6); /* Ditto */
+}
+
+#testimonials blockquote {
+  background: rgba(0,0,0,0.4); /* Improve readability inside quotes */
+  color: #f8f8f8;
+}
+
+#testimonials footer {
+  color: #ddd;
+}
+.section .content-wrapper {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 8px;
 }
