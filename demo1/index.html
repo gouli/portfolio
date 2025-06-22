@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,8 +8,9 @@
   <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-<header id="main-header" class="transparent">
+  <header id="main-header" class="transparent">
     <nav class="container-fluid nav-inner">
       <ul>
         <li><strong>Alex</strong></li>
@@ -31,47 +33,56 @@
   </section>
 
   <main class="container">
-    <section id="services" class="full-bg light-overlay services-bg">
+    <section id="services" class="section full-bg light-overlay services-bg">
       <h2>Services</h2>
       <div class="grid">
-        <article><h3>Web Design</h3><p>Modern, accessible, responsive websites.</p></article>
-        <article><h3>Frontend Dev</h3><p>Clean, scalable HTML, CSS & JavaScript.</p></article>
-        <article><h3>Site Optimization</h3><p>Fast, SEO-ready sites with performance tuning.</p></article>
+        <article>
+          <h3>Web Design</h3>
+          <p>Modern, responsive, user-focused web design.</p>
+        </article>
+        <article>
+          <h3>Frontend Dev</h3>
+          <p>Clean, scalable HTML/CSS/JS built for speed.</p>
+        </article>
+        <article>
+          <h3>Optimization</h3>
+          <p>SEO-friendly, high-performance websites.</p>
+        </article>
       </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="section">
       <h2>Projects</h2>
       <div class="grid">
         <article>
-          <img src="https://images.unsplash.com/photo-1581092160622-1e7e3286f643" alt="Dashboard UI">
+          <img src="https://images.unsplash.com/photo-1581092160622-1e7e3286f643" alt="Dashboard UI" />
           <h4>Admin Dashboard</h4>
-          <p>Built with modern CSS Grid, charts and accessibility.</p>
+          <p>Modern UI dashboard with data visualization.</p>
         </article>
         <article>
-          <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9" alt="Landing page">
+          <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9" alt="Landing page" />
           <h4>Landing Page</h4>
-          <p>Responsive layout with CTA focus and smooth animations.</p>
+          <p>Responsive landing layout with CTA optimization.</p>
         </article>
         <article>
-          <img src="https://images.unsplash.com/photo-1611175694980-4ec19cb3075d" alt="Blog UI">
+          <img src="https://images.unsplash.com/photo-1611175694980-4ec19cb3075d" alt="Blog UI" />
           <h4>Blog UI</h4>
-          <p>Minimalist design and clean post formatting.</p>
+          <p>Minimal blog experience with great typography.</p>
         </article>
         <article>
-          <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d" alt="Portfolio gallery">
+          <img src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d" alt="Portfolio Grid" />
           <h4>Portfolio Grid</h4>
-          <p>Project showcase with filterable grid layout.</p>
+          <p>Filterable portfolio using CSS Grid.</p>
         </article>
       </div>
     </section>
 
-    <section id="about" class="full-bg about-bg light-overlay">
+    <section id="about" class="section full-bg about-bg light-overlay">
       <h2>About Me</h2>
-      <p>I’m a frontend developer passionate about performance, simplicity, and bringing bold ideas to life with code. I enjoy building elegant UIs and solving real-world problems on the web.</p>
+      <p>I’m a frontend developer with a strong focus on clean design, accessibility, and performance. I turn complex ideas into elegant code.</p>
     </section>
 
-    <section id="testimonials" class="full-bg testimonial-bg">
+    <section id="testimonials" class="section full-bg testimonial-bg">
       <h2>Testimonials</h2>
       <div class="grid">
         <blockquote>
@@ -86,27 +97,28 @@
     </section>
   </main>
 
-  <section id="contact">
+  <section id="contact" class="section">
     <div class="container">
       <article>
         <hgroup>
           <h2>Contact Me</h2>
-          <h3>Let’s build something great together</h3>
+          <h3>Let’s build something great</h3>
         </hgroup>
         <form class="grid">
-          <input type="text" name="name" placeholder="Your name" aria-label="Name" required>
-          <input type="email" name="email" placeholder="Your email" aria-label="Email" required>
-          <textarea name="message" placeholder="Your message" aria-label="Message" required></textarea>
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea name="message" placeholder="Your message" required></textarea>
           <button type="submit" onclick="event.preventDefault()">Send</button>
         </form>
       </article>
     </div>
   </section>
 
-  <footer class="container">
+  <footer class="section container">
     <small><a href="#">LinkedIn</a> • <a href="#">GitHub</a></small>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
