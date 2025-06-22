@@ -86,6 +86,7 @@ p {
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px 0; /* Adjust padding if needed for new logo size */
 }
 
 .navbar {
@@ -120,7 +121,40 @@ p {
 .nav-links a:hover {
     color: var(--primary-color);
 }
+.logo {
+    display: flex; /* Use flexbox to stack initials and name */
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    line-height: 1.2; /* Adjust line height for stacked text */
+    color: var(--light-text); /* Base color for the logo */
+    text-transform: none; /* Remove uppercase from general logo */
+    letter-spacing: normal;
+}
 
+.logo-initials {
+    font-family: 'Montserrat', sans-serif; /* Fancy font for initials */
+    font-size: 2.5em; /* Make initials big */
+    font-weight: 700;
+    /* Add a gradient or unique color for a catchy look */
+    background: linear-gradient(45deg, #FFD700, #FFA500); /* Gold to Orange gradient */
+    -webkit-background-clip: text; /* Clip background to text shape */
+    -webkit-text-fill-color: transparent; /* Make text color transparent to show gradient */
+    background-clip: text; /* Standard property */
+    text-fill-color: transparent; /* Standard property */
+    transition: transform 0.3s ease;
+}
+
+.logo-initials:hover {
+    transform: scale(1.05); /* Slight grow effect on hover */
+}
+
+.logo-name {
+    font-family: 'Playfair Display', serif; /* Elegant font for the name */
+    font-size: 0.9em; /* Smaller size for the name */
+    font-style: italic; /* Make it italic */
+    font-weight: 400;
+    color: #b0c4de; /* A slightly softer white/light blue for contrast */
+}
 .hamburger {
     display: none; /* Hidden by default on larger screens */
     flex-direction: column;
@@ -357,14 +391,6 @@ section {
     transform: translateY(-3px);
 }
 
-/* Footer */
-.footer {
-    background-color: var(--dark-bg);
-    color: var(--light-text);
-    padding: 30px 0;
-    text-align: center;
-    font-size: 0.9em;
-}
 ---
 /* Services Section */
 .services-section {
@@ -409,6 +435,87 @@ section {
     font-size: 0.95em;
     line-height: 1.7;
     color: var(--secondary-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 50px 0; /* Increased padding for better spacing */
+    text-align: center; /* Center-align for mobile, grid will handle desktop */
+    font-size: 0.9em;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid for sections */
+    gap: 30px; /* Space between sections */
+    text-align: left; /* Align text within grid items to the left */
+}
+
+.footer-section h3 {
+    color: var(--primary-color); /* Highlight section titles */
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8); /* Slightly muted text color */
+    line-height: 1.6;
+}
+
+.footer-section p i {
+    margin-right: 8px; /* Space between icon and text */
+    color: var(--accent-color); /* Color for icons */
+}
+
+.footer-section a {
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-color);
+}
+
+.social-links-footer {
+    display: flex;
+    gap: 15px; /* Space between social icons */
+    margin-top: 10px;
+}
+
+.social-links-footer a {
+    font-size: 1.8em; /* Size of social icons */
+    color: var(--light-text);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links-footer a:hover {
+    color: var(--primary-color); /* Color on hover */
+    transform: translateY(-3px);
+}
+
+/* Ensure branding text aligns correctly */
+.footer-section:last-child {
+    text-align: left; /* Align branding text to left within its column */
+}
+
+/* Responsive adjustments for footer on smaller screens */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack footer sections vertically on mobile */
+        gap: 40px; /* More space between stacked sections */
+        text-align: center; /* Center text for all sections on mobile */
+    }
+
+    .footer-section:last-child {
+        text-align: center; /* Center branding text on mobile */
+    }
+
+    .social-links-footer {
+        justify-content: center; /* Center social links on mobile */
+    }
 }
 
 /* Update mobile media query for services section */
