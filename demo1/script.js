@@ -8,3 +8,5 @@ window.addEventListener("scroll", function () {
     header.classList.remove("scrolled");
   }
 });
+
+console.log("Portfolio site loaded.");
