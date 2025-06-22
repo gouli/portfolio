@@ -2,24 +2,60 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Hero Section */
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34');
+  background-size: cover;
+  background-position: center;
+  padding: 8rem 1rem;
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 img {
   width: 100%;
-  height: auto;
   border-radius: 6px;
 }
 
+/* Grid Card Styling */
 .grid article {
   background: #f9f9f9;
   padding: 1rem;
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .grid article:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-hgroup h2 {
-  margin-bottom: 0;
+/* Testimonials */
+.testimonials {
+  background-image: url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 1rem;
+  color: white;
+}
+
+blockquote {
+  border-left: 4px solid #fff;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+blockquote footer {
+  margin-top: 0.5rem;
+  font-weight: bold;
 }
