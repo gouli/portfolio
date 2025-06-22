@@ -168,12 +168,12 @@ section {
 
 #hero {
     /* Unsplash Image for Hero Section */
-    background-image: url('assets/section-1');
+    background-image: url('assets/section-1.jpg');
 }
 
 #portfolio {
     /* Unsplash Image for Portfolio Background */
-    background-image: url('assets/section-2);
+    background-image: url('assets/section-2.jpg);
 }
 
 .hero-content {
