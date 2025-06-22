@@ -286,7 +286,7 @@ section {
     background-image: url('assets/section-1.jpg'); /* Dark blue/green waves */
     background-color: #000; /* Fallback for image */
     background-blend-mode: luminosity; /* Adjust blend mode for effect, try others like overlay, screen, etc. */
-    filter: brightness(0.6); /* Dim the background to make content pop */
+    filter: brightness(0.9); /* Dim the background to make content pop */
 }
 #portfolio .container {
     z-index: 2; /* Ensure content is above filter/image */
