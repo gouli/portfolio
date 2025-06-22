@@ -96,65 +96,40 @@ p {
 }
 
 .logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: var(--light-text);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.nav-links {
-    list-style: none;
+    /* Existing logo styles for overall container */
     display: flex;
-}
-
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links a {
-    color: var(--light-text);
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-.logo {
-    display: flex; /* Use flexbox to stack initials and name */
     flex-direction: column;
-    align-items: flex-start; /* Align text to the left */
-    line-height: 1.2; /* Adjust line height for stacked text */
-    color: var(--light-text); /* Base color for the logo */
-    text-transform: none; /* Remove uppercase from general logo */
+    align-items: flex-start;
+    line-height: 1.2;
+    color: var(--light-text);
+    text-transform: none;
     letter-spacing: normal;
 }
 
 .logo-initials {
-    font-family: 'Montserrat', sans-serif; /* Fancy font for initials */
-    font-size: 2.5em; /* Make initials big */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
     font-weight: 700;
-    /* Add a gradient or unique color for a catchy look */
-    background: linear-gradient(45deg, #FFD700, #FFA500); /* Gold to Orange gradient */
-    -webkit-background-clip: text; /* Clip background to text shape */
-    -webkit-text-fill-color: transparent; /* Make text color transparent to show gradient */
-    background-clip: text; /* Standard property */
-    text-fill-color: transparent; /* Standard property */
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
     transition: transform 0.3s ease;
 }
 
 .logo-initials:hover {
-    transform: scale(1.05); /* Slight grow effect on hover */
+    transform: scale(1.05);
 }
 
 .logo-name {
-    font-family: 'Playfair Display', serif; /* Elegant font for the name */
-    font-size: 0.9em; /* Smaller size for the name */
-    font-style: italic; /* Make it italic */
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9em;
+    font-style: italic;
     font-weight: 400;
-    color: #b0c4de; /* A slightly softer white/light blue for contrast */
+    color: #b0c4de;
 }
+
 .hamburger {
     display: none; /* Hidden by default on larger screens */
     flex-direction: column;
@@ -173,8 +148,8 @@ p {
 section {
     padding: var(--section-padding);
     text-align: center;
-    position: relative; /* Needed for z-index or absolute positioning of children */
-    overflow: hidden; /* Important for parallax */
+    position: relative;
+    overflow: hidden;
 }
 
 /* Full-width Backgrounds & Parallax Effect */
@@ -182,21 +157,23 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* This is the magic for CSS parallax! */
-    color: var(--light-text); /* Ensure text is readable on dark backgrounds */
+    background-attachment: fixed;
+    color: var(--light-text);
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 700px; /* Adjust height as needed */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text readability */
+    min-height: 700px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 #hero {
-    background-image: url('https://via.placeholder.com/1920x1080/007bff/FFFFFF?text=Your+Hero+Image'); /* Replace with your image */
+    /* Unsplash Image for Hero Section */
+    background-image: url('https://images.unsplash.com/photo-1587440026217-1065715d3151?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
 }
 
 #portfolio {
-    background-image: url('https://via.placeholder.com/1920x1080/6c757d/FFFFFF?text=Portfolio+Background'); /* Replace with your image */
+    /* Unsplash Image for Portfolio Background */
+    background-image: url('https://images.unsplash.com/photo-1510915228389-f8ee59737b51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
 }
 
 .hero-content {
@@ -207,7 +184,7 @@ section {
 /* About Section */
 .about-section {
     background-color: #fff;
-    padding-top: 100px; /* Push content down due to fixed header */
+    padding-top: 100px;
 }
 
 .about-content {
@@ -215,7 +192,7 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    text-align: left; /* Align text within about content */
+    text-align: left;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -230,172 +207,13 @@ section {
 }
 
 .about-content p {
-    text-align: center; /* Center paragraphs within about section */
-}
-
-/* Skills Section - Design Pattern/Color Background */
-.skills-section {
-    background-color: var(--dark-bg); /* Solid color background */
-    color: var(--light-text);
-    /* Example of a subtle pattern using a gradient */
-    background-image: linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1) 100%),
-                      linear-gradient(-45deg, rgba(0,0,0,0.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1) 100%);
-    background-size: 20px 20px;
-    background-position: 0 0, 10px 10px;
-    padding-top: 100px; /* Push content down due to fixed header */
-}
-
-.skills-section h2 {
-    color: var(--light-text);
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.skill-item {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 30px 20px;
-    border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.skill-item:hover {
-    transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.skill-item i {
-    font-size: 3.5em;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.skill-item h3 {
-    font-size: 1.3em;
-    color: var(--light-text);
-}
-
-/* Portfolio Section */
-.portfolio-section {
-    padding-top: 100px; /* Push content down due to fixed header */
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.portfolio-item {
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: var(--dark-text); /* Ensure text is dark on light background */
-}
-
-.portfolio-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.portfolio-item img {
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.portfolio-item h3 {
-    font-size: 1.6em;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
-
-.portfolio-item p {
-    font-size: 0.95em;
-    margin-bottom: 20px;
-}
-
-.project-link {
-    background-color: var(--primary-color);
-    color: var(--light-text);
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.project-link:hover {
-    background-color: #0056b3; /* Darker blue */
-}
-
-
-/* Contact Section */
-.contact-section {
-    background-color: #f4f7f6; /* Light grey background */
-    padding-top: 100px; /* Push content down due to fixed header */
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-    transition: border-color 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--primary-color);
-    outline: none;
-}
-
-.contact-form button {
-    width: auto; /* Allow button to size to content */
-    align-self: center; /* Center the button */
-}
-
-.social-links {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-}
-
-.social-links a {
-    font-size: 2.5em;
-    color: var(--dark-text);
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-    transform: translateY(-3px);
-}
-
----
 /* Services Section */
 .services-section {
-    background-color: #f9f9f9; /* A light, clean background */
-    padding-top: 100px; /* Push content down due to fixed header */
+    background-color: #f9f9f9;
+    padding-top: 100px;
 }
 
 .services-grid {
@@ -437,37 +255,193 @@ section {
     color: var(--secondary-color);
 }
 
+/* Skills Section - Design Pattern/Color Background */
+.skills-section {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    background-image: linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1) 100%),
+                      linear-gradient(-45deg, rgba(0,0,0,0.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.1) 100%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    padding-top: 100px;
+}
+
+.skills-section h2 {
+    color: var(--light-text);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.skill-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.skill-item i {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.skill-item h3 {
+    font-size: 1.3em;
+    color: var(--light-text);
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding-top: 100px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.portfolio-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--dark-text);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.portfolio-item img {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.portfolio-item h3 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.portfolio-item p {
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #f4f7f6;
+    padding-top: 100px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.contact-form button {
+    width: auto;
+    align-self: center;
+}
+
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    font-size: 2.5em;
+    color: var(--dark-text);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
 /* Footer */
 .footer {
     background-color: var(--dark-bg);
     color: var(--light-text);
-    padding: 50px 0; /* Increased padding for better spacing */
-    text-align: center; /* Center-align for mobile, grid will handle desktop */
+    padding: 50px 0;
+    text-align: center;
     font-size: 0.9em;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid for sections */
-    gap: 30px; /* Space between sections */
-    text-align: left; /* Align text within grid items to the left */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: left;
 }
 
 .footer-section h3 {
-    color: var(--primary-color); /* Highlight section titles */
+    color: var(--primary-color);
     margin-bottom: 20px;
     font-size: 1.2em;
 }
 
 .footer-section p {
     margin-bottom: 10px;
-    color: rgba(255, 255, 255, 0.8); /* Slightly muted text color */
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
 }
 
 .footer-section p i {
-    margin-right: 8px; /* Space between icon and text */
-    color: var(--accent-color); /* Color for icons */
+    margin-right: 8px;
+    color: var(--accent-color);
 }
 
 .footer-section a {
@@ -481,48 +455,24 @@ section {
 
 .social-links-footer {
     display: flex;
-    gap: 15px; /* Space between social icons */
+    gap: 15px;
     margin-top: 10px;
 }
 
 .social-links-footer a {
-    font-size: 1.8em; /* Size of social icons */
+    font-size: 1.8em;
     color: var(--light-text);
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links-footer a:hover {
-    color: var(--primary-color); /* Color on hover */
+    color: var(--primary-color);
     transform: translateY(-3px);
 }
 
 /* Ensure branding text aligns correctly */
 .footer-section:last-child {
-    text-align: left; /* Align branding text to left within its column */
-}
-
-/* Responsive adjustments for footer on smaller screens */
-@media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr; /* Stack footer sections vertically on mobile */
-        gap: 40px; /* More space between stacked sections */
-        text-align: center; /* Center text for all sections on mobile */
-    }
-
-    .footer-section:last-child {
-        text-align: center; /* Center branding text on mobile */
-    }
-
-    .social-links-footer {
-        justify-content: center; /* Center social links on mobile */
-    }
-}
-
-/* Update mobile media query for services section */
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr; /* Stack services on small screens */
-    }
+    text-align: left;
 }
 
 /* --- Responsive Design (Media Queries) --- */
@@ -544,7 +494,7 @@ section {
         position: absolute;
         top: 100%;
         left: 0;
-        transform: translateY(-100%); /* Start off-screen */
+        transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s;
@@ -553,7 +503,7 @@ section {
     }
 
     .nav-links.active {
-        transform: translateY(0); /* Slide in */
+        transform: translateY(0);
         opacity: 1;
         visibility: visible;
     }
@@ -564,12 +514,12 @@ section {
     }
 
     .hamburger {
-        display: flex; /* Show hamburger menu on smaller screens */
-        z-index: 1001; /* Ensure it's above nav-links */
+        display: flex;
+        z-index: 1001;
     }
 
     .parallax {
-        min-height: 500px; /* Adjust height for smaller screens */
+        min-height: 500px;
     }
 
     .about-content {
@@ -581,7 +531,7 @@ section {
         text-align: center;
     }
 
-    .skills-grid, .portfolio-grid {
+    .skills-grid, .portfolio-grid, .services-grid { /* Added services-grid here */
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
@@ -606,12 +556,12 @@ section {
     }
 
     .parallax {
-        min-height: 400px; /* Further adjust height for mobile */
-        background-attachment: scroll; /* Disable parallax on mobile for performance/preference */
+        min-height: 400px;
+        background-attachment: scroll;
     }
 
-    .skills-grid, .portfolio-grid {
-        grid-template-columns: 1fr; /* Stack items vertically on very small screens */
+    .skills-grid, .portfolio-grid, .services-grid { /* Added services-grid here */
+        grid-template-columns: 1fr;
     }
 
     .profile-pic {
@@ -638,23 +588,34 @@ section {
     .social-links a {
         font-size: 2em;
     }
-}
 
-/* Further Mobile Optimization for Hamburger Menu Animation */
-@media (max-width: 768px) {
+    /* Further Mobile Optimization for Hamburger Menu Animation */
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
 
     .hamburger.active .bar:nth-child(1) {
-        /* Adjust transform-origin and position slightly if still cut off */
-        transform-origin: center center; /* Ensure rotation is around center */
+        transform-origin: center center;
         transform: translateY(7px) rotate(45deg);
     }
 
     .hamburger.active .bar:nth-child(3) {
-        /* Adjust transform-origin and position slightly if still cut off */
-        transform-origin: center center; /* Ensure rotation is around center */
+        transform-origin: center center;
         transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Responsive adjustments for footer on smaller screens */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .footer-section:last-child {
+        text-align: center;
+    }
+
+    .social-links-footer {
+        justify-content: center;
     }
 }
