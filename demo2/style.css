@@ -365,7 +365,58 @@ section {
     text-align: center;
     font-size: 0.9em;
 }
+---
+/* Services Section */
+.services-section {
+    background-color: #f9f9f9; /* A light, clean background */
+    padding-top: 100px; /* Push content down due to fixed header */
+}
 
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.service-item i {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: var(--dark-text);
+}
+
+.service-item p {
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: var(--secondary-color);
+}
+
+/* Update mobile media query for services section */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack services on small screens */
+    }
+}
 
 /* --- Responsive Design (Media Queries) --- */
 
