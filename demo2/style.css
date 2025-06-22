@@ -189,50 +189,96 @@ section {
 #hero {
     background-image: url('assets/section-3.jpg'); /* Orange/Blue light streaks */
     background-color: #000; /* Fallback/background for image */
-    background-blend-mode: overlay; /* Blend mode can make text easier to read, or remove if not needed */
-    filter: brightness(0.7); /* Slightly dim the image to help text pop */
+    background-blend-mode: normal; /* No blend mode for pure image */
+    filter: none; /* No brightness filter */
 }
-/* Re-add text-shadow directly to .hero-content if the filter above makes text harder to read */
 #hero .hero-content {
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-    z-index: 2; /* Ensure content is above filter/image */
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8); /* Keep text shadow for readability */
+    z-index: 2; /* Ensure content is above image */
 }
 
-#services {
+#about {
     background-image: url('assets/section-2.jpg'); /* Light blue ethereal */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Optional: Add a subtle overlay or blend mode for readability if needed */
     background-color: rgba(255,255,255,0.8); /* Light overlay */
-    background-blend-mode: overlay;
+    background-blend-mode: overlay; /* Blend mode for better readability */
     color: var(--dark-text); /* Keep dark text for light background */
     padding-top: 100px;
 }
-#services h2, #services .service-item h3 {
-    color: var(--dark-text); /* Ensure headers are dark */
+#about h2, #about p {
+    color: var(--dark-text); /* Ensure headers and text are dark */
 }
 
 
-#skills {
+#services {
     background-image: url('assets/section-4.jpg'); /* Blue/Purple network */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: var(--dark-bg); /* Fallback/background for image */
     background-blend-mode: overlay; /* Darken for readability */
-    color: var(--light-text);
+    color: var(--light-text); /* Text is light on this background */
     padding-top: 100px;
 }
-#skills h2, #skills .skill-item h3, #skills .skill-item i {
-    color: var(--light-text); /* Ensure headers and icons are light */
+#services h2, #services .service-item h3, #services .service-item i {
+    color: var(--light-text); /* Ensure headers, service item headers, and icons are light */
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* For skill item elements */
 }
-.skill-item {
+.service-item { /* Adjusting service item cards for the dark background */
     background-color: rgba(255, 255, 255, 0.15); /* Slightly more opaque for better contrast */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.service-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+#skills { /* White background for skills section */
+    background-image: none; /* Remove background image */
+    background-color: #fff; /* White background */
+    color: var(--dark-text); /* Dark text on white background */
+    padding-top: 100px;
+}
+#skills h2 {
+    color: var(--dark-text);
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjusted grid for skills */
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.skill-item { /* Original block/card kind of styles */
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 30px 20px; /* Increased padding */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px; /* Ensure consistent height */
 }
 .skill-item:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.skill-item i {
+    font-size: 4em; /* Larger icons */
+    color: var(--primary-color); /* Primary color for icons */
+    margin-bottom: 15px;
+}
+.skill-item h3 {
+    font-size: 1.2em;
+    color: var(--dark-text);
+    margin-bottom: 0;
 }
 
 
@@ -262,7 +308,8 @@ section {
 
 /* About Section */
 .about-section {
-    background-color: #fff;
+    /* Background image is now set above in #about */
+    background-color: #fff; /* Fallback for About section */
     padding-top: 100px;
 }
 
@@ -287,6 +334,39 @@ section {
 
 .about-content p {
     text-align: center;
+}
+
+/* Services Section (grid styles copied here for clarity, they were already good) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background-color: #fff; /* Re-adjust for new background */
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.service-item i {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
 }
 
 /* Contact Section */
