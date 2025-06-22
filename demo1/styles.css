@@ -1,0 +1,25 @@
+body {
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.grid article {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.grid article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+hgroup h2 {
+  margin-bottom: 0;
+}
