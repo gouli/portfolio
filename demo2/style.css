@@ -489,10 +489,14 @@ section {
     }
 
     .hamburger.active .bar:nth-child(1) {
+        /* Adjust transform-origin and position slightly if still cut off */
+        transform-origin: center center; /* Ensure rotation is around center */
         transform: translateY(7px) rotate(45deg);
     }
 
     .hamburger.active .bar:nth-child(3) {
+        /* Adjust transform-origin and position slightly if still cut off */
+        transform-origin: center center; /* Ensure rotation is around center */
         transform: translateY(-7px) rotate(-45deg);
     }
 }
